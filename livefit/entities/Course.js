@@ -7,7 +7,7 @@ module.exports = new EntitySchema({
     id: {
       primary: true,
       type: "uuid",
-      generated: "uuid" 
+      generated: "uuid"
     },
     name: {
       type: "varchar",
@@ -37,6 +37,11 @@ module.exports = new EntitySchema({
     updated_at: {
       type: "timestamp",
       updateDate: true
+    },
+    meeting_url: {
+      type: "varchar",
+      length: 2048,
+      nullable: true,  // 原先資料表已有資料，新欄位必須允許為空
     },
   },
   relations: {

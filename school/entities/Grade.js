@@ -13,6 +13,10 @@ module.exports = new EntitySchema({
       type: "integer",
       nullable: false,
     },
+    retake_score: {
+      type: "integer",
+      nullable: true,  // 原先資料表已有資料，新欄位必須允許為空
+    },
   },
   relations: {
     student: {
